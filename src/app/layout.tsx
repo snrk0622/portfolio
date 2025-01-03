@@ -20,11 +20,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+const RootLayout: React.FC<{
   children: React.ReactNode;
-}>) {
+}> = ({ children }) =>  {
   return (
     <html lang="en">
       <head>
@@ -71,3 +69,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;

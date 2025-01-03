@@ -56,7 +56,7 @@ let updateDOM: () => void;
 /**
  * Switch button to quickly toggle user preference.
  */
-const Switch = () => {
+const Switch: React.FC = () => {
   const [mode, setMode] = useState<ColorSchemePreference>(
     () =>
       ((typeof localStorage !== "undefined" &&
@@ -84,7 +84,7 @@ const Switch = () => {
     setMode(modes[(index + 1) % modes.length]);
   };
 
-  const modeIcon = () => {
+  const modeIcon = (): React.ReactNode => {
     switch (mode) {
       case "dark":
         return <FaMoon />;

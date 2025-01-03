@@ -4,6 +4,7 @@ import cn from "classnames";
 
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import Header from "@/app/_components/_layout/header";
+import Main from "@/app/_components/_layout/main";
 import Footer from "@/app/_components/footer";
 
 import "zenn-content-css";
@@ -64,7 +65,7 @@ export default function RootLayout({
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
         <Header />
-        <div className="min-h-screen mt-16">{children}</div>
+        <Main>{children}</Main>
         <Footer />
       </body>
     </html>

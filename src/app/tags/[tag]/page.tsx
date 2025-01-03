@@ -18,14 +18,14 @@ export default async function Tag(props: Params) {
           </Container>
         </Container>
       </main>
-  )
+  );
 }
 
 type Params = {
-  params: Promise<{
+  params: {
     tag: string;
-  }>
-}
+  };
+};
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
@@ -46,6 +46,6 @@ export async function generateStaticParams() {
   const tags = getAllTags();
 
   return tags.map((tag) => ({
-    tag: tag,
+    tag,
   }));
 }

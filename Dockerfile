@@ -1,11 +1,3 @@
 FROM node
 
-WORKDIR /app
-
-COPY package*.json ./
-
-RUN yarn install
-
-COPY . .
-
-CMD [ "yarn", "dev" ]
+RUN npm install --g firebase-tools

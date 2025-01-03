@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
+import { FaLightbulb, FaMoon, FaAdjust } from "react-icons/fa";
 
 declare global {
   var updateDOM: () => void;
@@ -83,12 +83,25 @@ const Switch = () => {
     const index = modes.indexOf(mode);
     setMode(modes[(index + 1) % modes.length]);
   };
+
+  const modeIcon = () => {
+    switch (mode) {
+      case "dark":
+        return <FaMoon />;
+      case "light":
+        return <FaLightbulb />;
+      default:
+        return <FaAdjust />;
+    }
+  };
+
   return (
     <button
       suppressHydrationWarning
-      className={styles.switch}
       onClick={handleModeSwitch}
-    />
+    >
+      {modeIcon()}
+    </button>
   );
 };
 

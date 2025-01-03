@@ -1,9 +1,10 @@
-import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
+
+import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import Header from "@/app/_components/_layout/header";
+import Footer from "@/app/_components/footer";
 
 import "zenn-content-css";
 import "./globals.css";
@@ -62,8 +63,8 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
+        <Header />
+        <div className="min-h-screen mt-16">{children}</div>
         <Footer />
       </body>
     </html>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { getAllTags, getPostsByTag } from "@/lib/api";
+import { getPostsByTag } from "@/lib/api/post";
+import { getAllTags } from "@/lib/api/tag";
 import { CMS_NAME } from "@/lib/constants";
 import { Post } from "@/interfaces/post";
 import Container from "@/app/_components/container";

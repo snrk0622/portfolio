@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import m2h from 'zenn-markdown-html';
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostBySlug } from "@/lib/api/post";
 import { CMS_NAME } from "@/lib/constants";
 import Alert from "@/app/_components/alert";
 import Container from "@/app/_components/container";

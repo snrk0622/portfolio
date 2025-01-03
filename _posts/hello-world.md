@@ -8,6 +8,7 @@ author:
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
+category: "blog"
 tags:
   - 'tag2'
   - 'tag3'

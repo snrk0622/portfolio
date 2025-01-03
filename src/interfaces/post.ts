@@ -1,4 +1,5 @@
 import { type Author } from "./author";
+import { type Category } from "./category";
 
 export type Post = {
   slug: string;
@@ -11,6 +12,7 @@ export type Post = {
     url: string;
   };
   content: string;
+  category: Category;
   preview?: boolean;
   tags: string[];
 };

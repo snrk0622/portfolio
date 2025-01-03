@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
@@ -23,7 +24,9 @@ export function PostHeader({ title, coverImage, date, author, tags }: Props) {
         {
           tags.map((tag) => (
             <li key={tag} className="font-bold mb-12">
-              <a href={`/tags/${tag}`}>{tag}</a>
+              <Link href={`/tags/${tag}`} className="hover:underline">
+                {tag}
+              </Link>
             </li>
           ))
         }

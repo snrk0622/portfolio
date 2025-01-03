@@ -22,9 +22,9 @@ export default async function Tag(props: Params) {
 }
 
 type Params = {
-  params: {
+  params: Promise<{
     tag: string;
-  };
+  }>;
 };
 
 export async function generateMetadata(props: Params): Promise<Metadata> {

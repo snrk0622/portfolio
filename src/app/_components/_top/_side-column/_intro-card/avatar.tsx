@@ -12,7 +12,7 @@ const Avatar: React.FC<Props> = ({ name, imagePath, externalLinks }) => {
     <div className="flex items-center">
       <img src={imagePath} className="w-14 h-14 rounded-full mr-4" alt={name} />
       <div>
-        <div className="text-xl font-bold">{name}</div>
+        <div className="text-xl font-bold mb-2">{name}</div>
         <div className="flex flex-wrap">
           {
             externalLinks.map((externalLink, index) => (

@@ -19,7 +19,7 @@ export const AuthorData: Author = {
     },
     {
       name: "React",
-      years: 2,
+      years: 11,
     },
   ],
   externalLinks: [

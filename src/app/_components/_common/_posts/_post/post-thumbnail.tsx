@@ -13,7 +13,7 @@ const PostThumbnail: React.FC<Props> = ({ post }) => {
   return (
     <div className="sm:w-1/2 lg:w-1/3 sm:px-2 pb-5">
       <Link href={`/posts/${post.slug}`}>
-        <div className="border rounded-md overflow-hidden h-full">
+        <div className="border border-light-sub dark:border-dark-sub overflow-hidden h-full">
           <img src={post.coverImage} alt={post.title} />
           <div className="p-4 pb-0">
             <div className="text-lg text-bold line-clamp-3">{ post.title }</div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Avatar from "./avatar";
+import Avatar from "./_top/_side-column/_intro-card/avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./_common/utils/date-formatter";
 import { PostTitle } from "@/app/_components/post-title";

@@ -1,3 +1,5 @@
+import { Tag } from '@/interfaces/tag'
+import { TagsData } from '@/data/tags'
 import { getAllPosts } from './post'
 
 export function getAllTags() {
@@ -6,4 +8,8 @@ export function getAllTags() {
     .sort()
 
   return Array.from(new Set(allPostTags))
+}
+
+export function getTagByName(tagName: string): Tag | undefined {
+  return TagsData.find((tag) => tag.name === tagName)
 }

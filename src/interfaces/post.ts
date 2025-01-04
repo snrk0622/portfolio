@@ -1,5 +1,6 @@
 import { type Author } from "./author";
 import { type Category } from "./category";
+import { Tag } from "./tag";
 
 export type Post = {
   slug: string;
@@ -14,5 +15,5 @@ export type Post = {
   content: string;
   category: Category;
   preview?: boolean;
-  tags: string[];
+  tags: Tag[];
 };

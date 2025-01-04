@@ -7,7 +7,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { MoreStories } from "@/app/_components/more-stories";
 
-export default async function Tag(props: Params) {
+export default async function TagPage(props: Params) {
   const params = await props.params;
   const posts: Post[] = getPostsByTag(params.tag);
   return (
@@ -47,6 +47,6 @@ export async function generateStaticParams() {
   const tags = getAllTags();
 
   return tags.map((tag) => ({
-    tag,
+    tag: tag.name,
   }));
 }

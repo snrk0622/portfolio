@@ -5,7 +5,7 @@ import cn from "classnames";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import Header from "@/app/_components/_layout/header";
 import Main from "@/app/_components/_layout/main";
-import Footer from "@/app/_components/footer";
+import Footer from "@/app/_components/_layout/footer";
 
 import "zenn-content-css";
 import "./globals.css";

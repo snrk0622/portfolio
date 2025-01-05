@@ -5,8 +5,8 @@ import { SiZenn } from "react-icons/si";
 import { Author } from "@/interfaces/author";
 
 export const AuthorData: Author = {
-  name: "Riki Shinohara",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  name: "snrk",
+  description: "I'm a Software Engineer.",
   imagePath: "/assets/_author/snrk.jpeg",
   skills: [
     {

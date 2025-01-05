@@ -1,3 +1,1 @@
-export type Category = 
-  | 'blog'
-  | 'work';
+export type Category = string;

@@ -27,6 +27,7 @@ const config: Config = {
       },
       spacing: {
         28: "7rem",
+        30: "7.5rem",
       },
       letterSpacing: {
         tighter: "-.04em",

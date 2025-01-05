@@ -14,8 +14,8 @@ const PostThumbnail: React.FC<Props> = ({ post }) => {
     <div className="sm:w-1/2 lg:w-1/3 sm:px-2 pb-5">
       <Link href={`/posts/${post.slug}`}>
         <div className="h-full border border-light-sub dark:border-dark-sub overflow-hidden">
-          <div className="aspect-[3/1] p-4 text-lg text-bold bg-light-sub dark:bg-dark-sub text-light-base dark:text-dark-base">
-            <div className="overflow-hidden line-clamp-3">{ post.title }</div>
+          <div className="h-30 overflow-hidden p-4 text-lg text-bold bg-light-sub dark:bg-dark-sub text-light-base dark:text-dark-base">
+            <div className="text-xl line-clamp-3">{ post.title }</div>
           </div>
           <div className="p-4">
             <Tags tags={post.tags} className="mb-2" />

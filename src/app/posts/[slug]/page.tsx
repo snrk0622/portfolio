@@ -3,11 +3,11 @@ import { notFound } from "next/navigation";
 import m2h from 'zenn-markdown-html';
 import { getAllPosts, getPostBySlug } from "@/lib/api/post";
 import { CMS_NAME } from "@/lib/constants";
-import Alert from "@/app/_components/alert";
-import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
-import { PostBody } from "@/app/_components/post-body";
-import { PostHeader } from "@/app/_components/post-header";
+import Alert from "@/app/_components/_posts/alert";
+import SideColumn from "@/app/_components/_common/_side-column/side-column";
+import MainColumn from "@/app/_components/_common/_main-column/main-column";
+import IntroCard from "@/app/_components/_common/_side-column/intro-card";
+import TagsCard from "@/app/_components/_common/_side-column/tags-card";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -22,22 +22,16 @@ export default async function Post(props: Params) {
   });
 
   return (
-    <main>
-      <Alert preview={post.preview} />
-      <Container>
-        <Header />
-        <article className="mb-32">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-            tags={post.tags}
-          />
-          <PostBody content={content} />
-        </article>
-      </Container>
-    </main>
+    <div className="md:flex md:flex-row-reverse">
+      <SideColumn>
+        {post.preview && <Alert />}
+        <IntroCard />
+        <TagsCard />
+      </SideColumn>
+      <MainColumn>
+        post
+      </MainColumn>
+    </div>
   );
 }
 

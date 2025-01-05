@@ -6,7 +6,7 @@ const IntroCard: React.FC = () => {
   const { name, description, imagePath, externalLinks } = AuthorData;
 
   return (
-    <SideColumnContainer>
+    <SideColumnContainer border={true}>
       <Avatar name={name} imagePath={imagePath} externalLinks={externalLinks} />
       <div className="mt-4 opacity-50">{description}</div>
     </SideColumnContainer>

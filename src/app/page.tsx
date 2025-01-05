@@ -1,9 +1,9 @@
-import MainColumn from "@/app/_components/_top/main-column";
-import SideColumn from "@/app/_components/_top/side-column";
-import PostsContent from "./_components/_top/_main-column/posts-content";
-import IntroCard from "./_components/_top/_side-column/intro-card";
-import SkillsCard from "./_components/_top/_side-column/skills-card";
-import TagsCard from "./_components/_top/_side-column/tags-card";
+import MainColumn from "@/app/_components/_common/_main-column/main-column";
+import SideColumn from "@/app/_components/_common/_side-column/side-column";
+import PostsContent from "./_components/_common/_main-column/posts-content";
+import IntroCard from "./_components/_common/_side-column/intro-card";
+import SkillsCard from "./_components/_common/_side-column/skills-card";
+import TagsCard from "./_components/_common/_side-column/tags-card";
 
 const TopPage: React.FC = () => {
   return (

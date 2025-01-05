@@ -1,6 +1,6 @@
 import { AuthorData } from "@/data/author";
 import Avatar from "./_intro-card/avatar";
-import SideColumnContainer from "@/app/_components/_top/_side-column/_common/side-column-container";
+import SideColumnContainer from "@/app/_components/_common/_side-column/_common/side-column-container";
 
 const IntroCard: React.FC = () => {
   const { name, description, imagePath, externalLinks } = AuthorData;

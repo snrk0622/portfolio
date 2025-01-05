@@ -4,13 +4,14 @@ import CoverImage from "./cover-image";
 import DateFormatter from "./_common/utils/date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
 import { type Author } from "@/interfaces/author";
+import { Tag } from "@/interfaces/tag";
 
 type Props = {
   title: string;
   coverImage: string;
   date: string;
   author: Author;
-  tags: string[];
+  tags: Tag[];
 };
 
 export function PostHeader({ title, coverImage, date, author, tags }: Props) {
@@ -18,14 +19,14 @@ export function PostHeader({ title, coverImage, date, author, tags }: Props) {
     <>
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
+        <Avatar name={author.name} imagePath={author.imagePath} externalLinks={author.externalLinks} />
       </div>
       <ul className="flex gap-x-2">
         {
           tags.map((tag) => (
-            <li key={tag} className="font-bold mb-12">
+            <li key={tag.name} className="font-bold mb-12">
               <Link href={`/tags/${tag}`} className="hover:underline">
-                {tag}
+                {tag.name}
               </Link>
             </li>
           ))
@@ -36,7 +37,7 @@ export function PostHeader({ title, coverImage, date, author, tags }: Props) {
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
-          <Avatar name={author.name} picture={author.picture} />
+        <Avatar name={author.name} imagePath={author.imagePath} externalLinks={author.externalLinks} />
         </div>
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />

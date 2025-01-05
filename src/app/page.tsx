@@ -3,6 +3,7 @@ import SideColumn from "@/app/_components/_top/side-column";
 import PostsContent from "./_components/_top/_main-column/posts-content";
 import IntroCard from "./_components/_top/_side-column/intro-card";
 import SkillsCard from "./_components/_top/_side-column/skills-card";
+import TagsCard from "./_components/_top/_side-column/tags-card";
 
 const TopPage: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const TopPage: React.FC = () => {
       <SideColumn>
         <IntroCard />
         <SkillsCard />
+        <TagsCard />
       </SideColumn>
       <MainColumn>
         <PostsContent title="Recent Blogs." category="blog" limit={6} />

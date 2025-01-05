@@ -3,7 +3,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 
 import { Post } from "@/interfaces/post";
 import DateFormatter from "@/app/_components/_common/utils/date-formatter";
-import Tags from "./tags";
+import Tags from "@/app/_components/_common/_tags/tags";
 
 type Props = {
   post: Post;

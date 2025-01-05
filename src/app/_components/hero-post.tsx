@@ -1,4 +1,4 @@
-import Avatar from "@/app/_components/_top/_side-column/_intro-card/avatar";
+import Avatar from "@/app/_components/_common/_side-column/_intro-card/avatar";
 import CoverImage from "@/app/_components/cover-image";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";

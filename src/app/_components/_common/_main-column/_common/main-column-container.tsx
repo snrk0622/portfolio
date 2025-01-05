@@ -11,7 +11,7 @@ const MainColumnContainer: React.FC<Props> = ({ title, category, border= true, c
   return (
     <div className="mb-6">
       <div className="flex justify-between items-center">
-        <h2 className="mb-2 text-5xl font-bold">{ title }</h2>
+        {title && <div className="text-5xl font-bold">{title}</div>}
         {category && <Link href={`/categories/${category}`} className='hover:underline'>see more ...</Link>}
       </div>
       <div className={`${border && 'border p-4'} border-light-sub dark:border-dark-sub`}>{children}</div>

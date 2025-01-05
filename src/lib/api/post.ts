@@ -33,7 +33,7 @@ export function getPostBySlug(slug: string): Post {
   const post = ({ ...data, slug: realSlug, content }) as PostWithStringTag;
   const tags = post.tags.map((tag) => getTagByName(tag)).filter((tag) => tag !== undefined);
   
-  return ({ ...post, tags }) as Post;
+  return ({ ...post, tags });
 }
 
 export function getPostsByCategory(category: Category, limit?: number) {

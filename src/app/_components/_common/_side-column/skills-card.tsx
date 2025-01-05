@@ -1,4 +1,4 @@
-import SideColumnContainer from "@/app/_components/_top/_side-column/_common/side-column-container";
+import SideColumnContainer from "@/app/_components/_common/_side-column/_common/side-column-container";
 import SkillItem from "./_skills-card/skill-item";
 
 import { AuthorData } from "@/data/author";

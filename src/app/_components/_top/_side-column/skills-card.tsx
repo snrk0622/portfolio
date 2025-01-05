@@ -7,7 +7,7 @@ const SkillsCard: React.FC = () => {
   const { skills } = AuthorData;
 
   return (
-    <SideColumnContainer title="Skills.">
+    <SideColumnContainer title="Skills." border={true}>
       <div className="mt-2">
         {skills.map((skill) => (
           <SkillItem key={skill.name} skill={skill} />

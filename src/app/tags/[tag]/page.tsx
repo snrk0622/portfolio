@@ -1,24 +1,35 @@
 import { Metadata } from "next";
 import { getPostsByTag } from "@/lib/api/post";
-import { getAllTags } from "@/lib/api/tag";
+import { getAllTags, getTagByName } from "@/lib/api/tag";
 import { CMS_NAME } from "@/lib/constants";
 import { Post } from "@/interfaces/post";
-import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
-import { MoreStories } from "@/app/_components/more-stories";
+import SideColumn from "@/app/_components/_common/_side-column/side-column";
+import MainColumn from "@/app/_components/_common/_main-column/main-column";
+import TagsCard from "@/app/_components/_common/_side-column/tags-card";
+import SkillsCard from "@/app/_components/_common/_side-column/skills-card";
+import IntroCard from "@/app/_components/_common/_side-column/intro-card";
+import { Tag } from "@/interfaces/tag";
+import TagHeader from "@/app/_components/_tags/tag-header";
+import PostsByTag from "@/app/_components/_common/_posts/posts-by-tag";
 
-export default async function TagPage(props: Params) {
+const TagPage: React.FC<Params> = async (props) => {
   const params = await props.params;
+  const tag = getTagByName(params.tag) as Tag;
   const posts: Post[] = getPostsByTag(params.tag);
   return (
-      <main>
-        <Container>
-          <Header />
-          <Container>
-            {posts.length > 0 && <MoreStories posts={posts} />}
-          </Container>
-        </Container>
-      </main>
+    <div>
+      <TagHeader tag={tag} />
+      <div className="flex flex-wrap">
+        <MainColumn>
+          <PostsByTag tag={tag} />
+        </MainColumn>
+        <hr className="w-full mt-10 mb-16 border-light-sub dark:border-dark-sub block md:hidden" />
+        <SideColumn>
+          <IntroCard />
+          <TagsCard />
+        </SideColumn>
+      </div>
+    </div>
   );
 }
 
@@ -50,3 +61,5 @@ export async function generateStaticParams() {
     tag: tag.name,
   }));
 }
+
+export default TagPage;

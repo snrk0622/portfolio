@@ -12,6 +12,7 @@ category: "blog"
 tags:
   - 'JavaScript'
   - 'TypeScript'
+  - 'React'
 preview: true
 ---
 

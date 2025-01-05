@@ -29,7 +29,7 @@ const SkillItem: React.FC<Props> = ({ skill }) => {
           const size = year === skill.years || (year === MAX_YEARS && skill.years > MAX_YEARS) ? 'w-3/12' : 'w-1/12';
           const color = year <= skill.years ? 'bg-light-sub dark:bg-dark-sub text-light-base dark:text-dark-base' : 'border border-light-sub dark:border-dark-sub';
           const years = year === skill.years && year <= MAX_YEARS ? `== ${skill.years} yrs` : year === MAX_YEARS && skill.years > MAX_YEARS ? `>= ${MAX_YEARS} yrs` : '';
-          return <div className={`mr-1 text-2xs text-center ${size} ${color}`}>{years}</div>
+          return <div key={`${skill.name}-${year}`} className={`mr-1 text-2xs text-center ${size} ${color}`}>{years}</div>
         })}
       </div>
     </div>

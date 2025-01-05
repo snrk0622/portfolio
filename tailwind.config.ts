@@ -15,6 +15,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        "light-base": "#FFFFFF",
+        "dark-base": "#0F172A",
+        "light-sub": "#000000",
+        "dark-sub": "#94A3B8",
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",
         "accent-7": "#333",
@@ -28,6 +32,7 @@ const config: Config = {
         tighter: "-.04em",
       },
       fontSize: {
+        "2xs": ["0.7rem", { lineHeight: "1rem" }],
         "5xl": "2.5rem",
         "6xl": "2.75rem",
         "7xl": "4.5rem",
@@ -36,6 +41,10 @@ const config: Config = {
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
+      },
+      aspectRatio: {
+        '2/1': '2 / 1',
+        '6/1': '6 / 1',
       },
     },
   },

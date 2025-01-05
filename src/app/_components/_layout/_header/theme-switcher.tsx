@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
+import { FaLightbulb, FaMoon, FaAdjust } from "react-icons/fa";
 
 declare global {
   var updateDOM: () => void;
@@ -56,7 +56,7 @@ let updateDOM: () => void;
 /**
  * Switch button to quickly toggle user preference.
  */
-const Switch = () => {
+const Switch: React.FC = () => {
   const [mode, setMode] = useState<ColorSchemePreference>(
     () =>
       ((typeof localStorage !== "undefined" &&
@@ -83,12 +83,25 @@ const Switch = () => {
     const index = modes.indexOf(mode);
     setMode(modes[(index + 1) % modes.length]);
   };
+
+  const modeIcon = (): React.ReactNode => {
+    switch (mode) {
+      case "dark":
+        return <FaMoon />;
+      case "light":
+        return <FaLightbulb />;
+      default:
+        return <FaAdjust />;
+    }
+  };
+
   return (
     <button
       suppressHydrationWarning
-      className={styles.switch}
       onClick={handleModeSwitch}
-    />
+    >
+      {modeIcon()}
+    </button>
   );
 };
 

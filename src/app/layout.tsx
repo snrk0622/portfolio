@@ -1,9 +1,11 @@
-import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
+
+import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import Header from "@/app/_components/_layout/header";
+import Main from "@/app/_components/_layout/main";
+import Footer from "@/app/_components/footer";
 
 import "zenn-content-css";
 import "./globals.css";
@@ -18,11 +20,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+const RootLayout: React.FC<{
   children: React.ReactNode;
-}>) {
+}> = ({ children }) =>  {
   return (
     <html lang="en">
       <head>
@@ -62,10 +62,12 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
+        <Header />
+        <Main>{children}</Main>
         <Footer />
       </body>
     </html>
   );
 }
+
+export default RootLayout;

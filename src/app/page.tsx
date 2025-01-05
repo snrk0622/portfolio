@@ -1,30 +1,24 @@
-import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import MainColumn from "@/app/_components/_top/main-column";
+import SideColumn from "@/app/_components/_top/side-column";
+import PostsContent from "./_components/_top/_main-column/posts-content";
+import IntroCard from "./_components/_top/_side-column/intro-card";
+import SkillsCard from "./_components/_top/_side-column/skills-card";
+import TagsCard from "./_components/_top/_side-column/tags-card";
 
-export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
+const TopPage: React.FC = () => {
   return (
-    <main>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </main>
+    <div className="md:flex md:flex-row-reverse">
+      <SideColumn>
+        <IntroCard />
+        <SkillsCard />
+        <TagsCard />
+      </SideColumn>
+      <MainColumn>
+        <PostsContent title="Recent Blogs." category="blog" limit={6} />
+        <PostsContent title="Works." category="work" />
+      </MainColumn>
+    </div>
   );
 }
+
+export default TopPage;

@@ -10,6 +10,7 @@ import IntroCard from "@/app/_components/_common/_side-column/intro-card";
 import TagsCard from "@/app/_components/_common/_side-column/tags-card";
 import PostHeader from "@/app/_components/_posts/post-header";
 import PostBody from "@/app/_components/_posts/post-body";
+import PostToc from "@/app/_components/_posts/post-toc";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -33,7 +34,12 @@ export default async function Post(props: Params) {
         </MainColumn>
         <SideColumn>
           <IntroCard />
-          <TagsCard />
+          <div className="sticky top-20">
+            <div className="hidden md:block">
+              <PostToc />
+            </div>
+            <TagsCard />
+          </div>
         </SideColumn>
       </div>
     </div>

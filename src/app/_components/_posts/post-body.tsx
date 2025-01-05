@@ -15,7 +15,7 @@ const PostBody: React.FC<Props> = ({ tags, content }) => {
         <Tags tags={tags} />
         <div className="znc">
             <div
-              className={markdownStyles["markdown"]}
+              className={`target-toc ${markdownStyles["markdown"]}`}
               dangerouslySetInnerHTML={{ __html: content }}
             />
         </div>

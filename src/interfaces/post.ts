@@ -9,5 +9,5 @@ export type Post = {
   category: Category;
   preview?: boolean;
   tags: Tag[];
-  relatedPosts: string[];
+  relatedPosts?: string[];
 };

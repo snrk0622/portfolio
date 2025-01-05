@@ -7,7 +7,7 @@ const TagsCard: React.FC = () => {
   const tags = getAllTags();
 
   return (
-    <SideColumnContainer title="Tags." border={false}>
+    <SideColumnContainer title="All Tags." border={false}>
       <Tags tags={tags} displayCount={true} />
     </SideColumnContainer>
   );

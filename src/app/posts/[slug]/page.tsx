@@ -12,6 +12,7 @@ import PostBody from "@/app/_components/_posts/post-body";
 import PostToc from "@/app/_components/_posts/post-toc";
 import { AuthorData } from "@/data/author";
 import { BLOG_NAME } from "@/lib/constants";
+import RelatedPostsCard from "@/app/_components/_posts/related-posts-card";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -39,6 +40,8 @@ export default async function Post(props: Params) {
             <div className="hidden md:block">
               <PostToc />
             </div>
+            <hr className="my-5 border-light-sub dark:border-dark-sub" />
+            {post.relatedPosts && <RelatedPostsCard posts={post.relatedPosts} />}
             <TagsCard />
           </div>
         </SideColumn>

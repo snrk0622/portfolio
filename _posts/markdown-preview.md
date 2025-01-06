@@ -11,12 +11,13 @@ tags:
 ---
 
 ## はじめに
-このブログはZennのmarkdownを導入しています。
-Next.jsや下記ライブラリを利用したブログの構築手順は後日記事にしようと思います。
+このブログは下記ライブラリを利用してZennのmarkdownを導入しています。
 
 https://zenn-dev.github.io/zenn-docs-for-developers/guides/zenn-editor/zenn-markdown-html
 https://zenn-dev.github.io/zenn-docs-for-developers/guides/zenn-editor/zenn-content-css
 https://zenn-dev.github.io/zenn-docs-for-developers/guides/zenn-editor/zenn-embed-elements
+
+Next.jsでのブログ構築手順は後日記事にしようと思います。
 
 また、この記事はZenn公式の「ZennのMarkdown記法一覧」と表示を比較することを目的としています。
 https://zenn.dev/zenn/articles/markdown-guide

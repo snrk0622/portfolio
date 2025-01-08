@@ -3,13 +3,19 @@ import React from "react";
 import Tags from "../_tags/tags";
 import { getAllTags } from "@/lib/api/tag";
 
-const TagsCard: React.FC = () => {
+type Props = {
+  className?: string;
+}
+
+const TagsCard: React.FC<Props> = ({ className }) => {
   const tags = getAllTags();
 
   return (
-    <SideColumnContainer title="All Tags." border={false}>
-      <Tags tags={tags} displayCount={true} />
-    </SideColumnContainer>
+    <div className={className}>
+      <SideColumnContainer title="All Tags." border={false}>
+        <Tags tags={tags} displayCount={true} />
+      </SideColumnContainer>
+    </div>
   );
 }
 

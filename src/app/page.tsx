@@ -4,6 +4,9 @@ import PostsContent from "./_components/_common/_main-column/posts-content";
 import IntroCard from "./_components/_common/_side-column/intro-card";
 import SkillsCard from "./_components/_common/_side-column/skills-card";
 import TagsCard from "./_components/_common/_side-column/tags-card";
+import { Metadata } from "next";
+import { BLOG_NAME } from "@/lib/constants";
+import { AuthorData } from "@/data/author";
 
 const TopPage: React.FC = () => {
   return (
@@ -19,6 +22,16 @@ const TopPage: React.FC = () => {
       </MainColumn>
     </div>
   );
+}
+
+export function generateMetadata(): Metadata {
+  return {
+    title: BLOG_NAME,
+    openGraph: {
+      title: BLOG_NAME,
+      images: [AuthorData.imagePath],
+    },
+  };
 }
 
 export default TopPage;

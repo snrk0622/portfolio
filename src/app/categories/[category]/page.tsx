@@ -37,7 +37,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
   const categoryName = params.category;
 
-  const title = `${categoryName} | Next.js Blog Example with ${BLOG_NAME}`;
+  const title = `All ${categoryName} | ${BLOG_NAME}`;
 
   return {
     title,

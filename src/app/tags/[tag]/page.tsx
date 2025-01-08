@@ -8,6 +8,7 @@ import IntroCard from "@/app/_components/_common/_side-column/intro-card";
 import { Tag } from "@/interfaces/tag";
 import TagHeader from "@/app/_components/_tags/tag-header";
 import PostsByTag from "@/app/_components/_common/_posts/posts-by-tag";
+import { AuthorData } from "@/data/author";
 
 const TagPage: React.FC<Params> = async (props) => {
   const params = await props.params;
@@ -39,13 +40,13 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
   const tagName = params.tag;
 
-  const title = `${tagName} | Next.js Blog Example with ${BLOG_NAME}`;
+  const title = `All blog for ${tagName} | ${BLOG_NAME}`;
 
   return {
     title,
     openGraph: {
       title,
-      // images: [post.ogImage.url],
+      images: [AuthorData.imagePath],
     },
   };
 }

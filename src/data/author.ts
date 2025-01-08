@@ -1,13 +1,12 @@
 import { FaGithub } from "react-icons/fa";
-import { SiQiita } from "react-icons/si";
 import { SiZenn } from "react-icons/si";
 
 import { Author } from "@/interfaces/author";
 
 export const AuthorData: Author = {
   name: "snrk",
-  description: "I'm a Software Engineer.",
-  imagePath: "/assets/_author/snrk.jpeg",
+  description: "美容系メディアを運営する会社でエンジニアをしています。コーヒーと猫が好きです。",
+  imagePath: "/assets/_author/snrk.png",
   skills: [
     {
       name: "JavaScript",
@@ -15,11 +14,19 @@ export const AuthorData: Author = {
     },
     {
       name: "TypeScript",
-      years: 3,
+      years: 2,
     },
     {
       name: "React",
-      years: 11,
+      years: 2,
+    },
+    {
+      name: "Node.js",
+      years: 2,
+    },
+    {
+      name: "PHP",
+      years: 3,
     },
   ],
   externalLinks: [
@@ -32,11 +39,6 @@ export const AuthorData: Author = {
       name: "Zenn",
       icon: SiZenn,
       url: "https://zenn.dev/snrk",
-    },
-    {
-      name: "Qiita",
-      icon: SiQiita,
-      url: "https://qiita.com/snrk",
     },
   ],
 }

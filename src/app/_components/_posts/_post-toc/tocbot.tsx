@@ -10,8 +10,8 @@ const Tocbot: React.FC = () => {
       headingSelector: "h1, h2, h3, h4", // 目次として取得する見出しタグ
       collapseDepth: 6, // 折り畳む深さ
       linkClass: "toc-link-dummy", // リンクに追加する class 名
-      // headingsOffset: 100, // 見出しのオフセット
-      // scrollSmoothOffset: -40, //スムーススクロールのオフセット
+      headingsOffset: 64, // 見出しのオフセット
+      scrollSmoothOffset: -64, //スムーススクロールのオフセット
     });
 
     // 不要となったtocbotインスタンスを削除

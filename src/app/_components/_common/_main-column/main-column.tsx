@@ -2,7 +2,7 @@ const MainColumn: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   return (
-    <div className="md:w-3/4 md:pr-6">{ children }</div>
+    <div className="lg:w-3/4 lg:pr-6">{ children }</div>
   );
 }
 

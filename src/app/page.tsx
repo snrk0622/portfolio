@@ -10,7 +10,7 @@ import { AuthorData } from "@/data/author";
 
 const TopPage: React.FC = () => {
   return (
-    <div className="md:flex md:flex-row-reverse">
+    <div className="lg:flex lg:flex-row-reverse">
       <SideColumn>
         <IntroCard />
         <SkillsCard />

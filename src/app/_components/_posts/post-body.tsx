@@ -11,7 +11,7 @@ type Props = {
 const PostBody: React.FC<Props> = ({ tags, content }) => {
   return (
     <MainColumnContainer border={true}>
-      <div className="p-1 sm:p-4 md:p-6">
+      <div className="p-1 sm:p-4 lg:p-6">
         <Tags tags={tags} />
         <div className="znc">
             <div

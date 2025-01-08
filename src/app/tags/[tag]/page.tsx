@@ -20,7 +20,7 @@ const TagPage: React.FC<Params> = async (props) => {
         <MainColumn>
           <PostsByTag tag={tag} />
         </MainColumn>
-        <hr className="w-full mt-10 mb-16 border-light-sub dark:border-dark-sub block md:hidden" />
+        <hr className="w-full mt-10 mb-16 border-light-sub dark:border-dark-sub block lg:hidden" />
         <SideColumn>
           <IntroCard />
           <TagsCard />

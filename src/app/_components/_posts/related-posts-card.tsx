@@ -10,9 +10,9 @@ type Props = {
 const RelatedPostsCard: React.FC<Props> = ({ posts }) => {
   return (
     <SideColumnContainer title="Related Contents." border={false}>
-      {posts.map((postName) => {
+      {posts.map((postName, index) => {
         const post: Post = getPostBySlug(postName);
-        return <PostThumbnail key={postName} post={post} isFullWidth />;
+        return <PostThumbnail key={postName} post={post} isFullWidth  isFirst={index == 0} isLast={index == posts.length - 1} />;
       })}
     </SideColumnContainer>
   );

@@ -12,9 +12,13 @@ const PostByCategory: React.FC<Props> = ({ category, limit }) => {
 
   return (
     <div className="sm:flex sm:flex-wrap sm:items-stretch">
-      {posts.map((post) => (
-        <PostThumbnail key={post.slug} post={post} />
-      ))}
+      {
+        posts.length ?
+        posts.map((post) => (
+          <PostThumbnail key={post.slug} post={post} />
+        )) :
+        <div className="opacity-20">coming soon ...</div>
+      }
     </div>
   );
 }

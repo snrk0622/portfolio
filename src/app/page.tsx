@@ -3,6 +3,7 @@ import SideColumn from "@/app/_components/_common/_side-column/side-column";
 import PostsContent from "./_components/_common/_main-column/posts-content";
 import IntroCard from "./_components/_common/_side-column/intro-card";
 import SkillsCard from "./_components/_common/_side-column/skills-card";
+import CertificationsCard from "./_components/_common/_side-column/certifications-card";
 import TagsCard from "./_components/_common/_side-column/tags-card";
 import { Metadata } from "next";
 import { BLOG_NAME } from "@/lib/constants";
@@ -14,6 +15,7 @@ const TopPage: React.FC = () => {
       <SideColumn>
         <IntroCard />
         <SkillsCard />
+        <CertificationsCard />
         <TagsCard className="hidden sm:block" />
       </SideColumn>
       <MainColumn>

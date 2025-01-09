@@ -30,14 +30,14 @@ export default async function Post(props: Params) {
     <div>
       {post.preview && <Alert />}
       <PostHeader title={post.title} date={post.date} />
-      <div className="md:flex">
+      <div className="lg:flex">
         <MainColumn>
           <PostBody tags={post.tags} content={content} />
         </MainColumn>
         <SideColumn>
           <IntroCard />
           <div className="sticky top-20">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <PostToc />
             </div>
             <hr className="my-5 border-light-sub dark:border-dark-sub" />

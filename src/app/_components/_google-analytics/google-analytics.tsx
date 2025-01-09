@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { IS_GATAG, GA_TAG_ID, pageview } from "@/lib/gtag";
 
 const GoogleAnalytics: React.FC = () => {
@@ -11,11 +11,11 @@ const GoogleAnalytics: React.FC = () => {
 
   useEffect(() => {
     if (!IS_GATAG) {
-      return
+      return;
     }
-    const url = pathname + searchParams.toString()
-    pageview(url)
-  }, [pathname, searchParams])
+    const url = pathname + searchParams.toString();
+    pageview(url);
+  }, [pathname, searchParams]);
 
   return (
     <>
@@ -37,4 +37,12 @@ const GoogleAnalytics: React.FC = () => {
   );
 };
 
-export default GoogleAnalytics;
+const GoogleAnalyticsWithSuspense: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GoogleAnalytics />
+    </Suspense>
+  );
+};
+
+export default GoogleAnalyticsWithSuspense;

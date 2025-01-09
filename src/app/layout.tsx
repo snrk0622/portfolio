@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import Header from "@/app/_components/_layout/header";
 import Main from "@/app/_components/_layout/main";
 import Footer from "@/app/_components/_layout/footer";
@@ -12,14 +10,6 @@ import "./globals.css";
 import GoogleAnalytics from "./_components/_google-analytics/google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
-  openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
-};
 
 const RootLayout: React.FC<{
   children: React.ReactNode;

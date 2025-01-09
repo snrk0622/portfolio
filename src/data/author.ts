@@ -28,6 +28,20 @@ export const AuthorData: Author = {
       name: "PHP",
       years: 3,
     },
+    {
+      name: "AWS",
+      years: 1,
+    },
+    {
+      name: "SQL",
+      years: 3,
+    },
+  ],
+  certifications: [
+    {
+      name: 'AWS Certified Solutions Architect – Associate',
+      url: 'https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/?nc1=h_ls',
+    },
   ],
   externalLinks: [
     {

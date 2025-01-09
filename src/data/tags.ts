@@ -9,6 +9,7 @@ import { SiNodedotjs } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { RiPhpFill } from "react-icons/ri";
 import { FaAws } from "react-icons/fa";
+import { TbSql } from "react-icons/tb";
 
 export const TagsData: Tag[] = [
   { name: "JavaScript", icon: SiJavascript, },
@@ -19,4 +20,5 @@ export const TagsData: Tag[] = [
   { name: "tailwindcss", icon: SiTailwindcss, },
   { name: "PHP", icon: RiPhpFill, },
   { name: "AWS", icon: FaAws, },
+  { name: "SQL", icon: TbSql, },
 ];

@@ -32,6 +32,10 @@ export const AuthorData: Author = {
       name: "AWS",
       years: 1,
     },
+    {
+      name: "SQL",
+      years: 3,
+    },
   ],
   certifications: [
     {

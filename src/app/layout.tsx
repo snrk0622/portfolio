@@ -9,6 +9,7 @@ import Footer from "@/app/_components/_layout/footer";
 
 import "zenn-content-css";
 import "./globals.css";
+import GoogleAnalytics from "./_components/_google-analytics/google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,6 +63,7 @@ const RootLayout: React.FC<{
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"
         />
+        <GoogleAnalytics />
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}

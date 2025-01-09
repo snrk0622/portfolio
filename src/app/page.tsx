@@ -1,30 +1,38 @@
-import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import MainColumn from "@/app/_components/_common/_main-column/main-column";
+import SideColumn from "@/app/_components/_common/_side-column/side-column";
+import PostsContent from "./_components/_common/_main-column/posts-content";
+import IntroCard from "./_components/_common/_side-column/intro-card";
+import SkillsCard from "./_components/_common/_side-column/skills-card";
+import TagsCard from "./_components/_common/_side-column/tags-card";
+import { Metadata } from "next";
+import { BLOG_NAME } from "@/lib/constants";
+import { AuthorData } from "@/data/author";
 
-export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
+const TopPage: React.FC = () => {
   return (
-    <main>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </main>
+    <div className="lg:flex lg:flex-row-reverse">
+      <SideColumn>
+        <IntroCard />
+        <SkillsCard />
+        <TagsCard className="hidden sm:block" />
+      </SideColumn>
+      <MainColumn>
+        <PostsContent title="Recent Blogs." category="blog" limit={6} />
+        <PostsContent title="Works." category="work" />
+        <TagsCard className="block sm:hidden" />
+      </MainColumn>
+    </div>
   );
 }
+
+export function generateMetadata(): Metadata {
+  return {
+    title: BLOG_NAME,
+    openGraph: {
+      title: BLOG_NAME,
+      images: [AuthorData.imagePath],
+    },
+  };
+}
+
+export default TopPage;

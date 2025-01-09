@@ -1,15 +1,13 @@
-import { type Author } from "./author";
+import { type Category } from "./category";
+import { Tag } from "./tag";
 
 export type Post = {
   slug: string;
   title: string;
   date: string;
-  coverImage: string;
-  author: Author;
-  excerpt: string;
-  ogImage: {
-    url: string;
-  };
   content: string;
+  category: Category;
   preview?: boolean;
+  tags: Tag[];
+  relatedPosts?: string[];
 };

@@ -17,7 +17,7 @@ const SkillItem: React.FC<Props> = ({ skill }) => {
   return (
     <div className="mb-4">
       <div className="flex items-center mb-1">
-        {tag && tag.icon ? <tag.icon className="w-4 h-4" /> : <PiSealQuestionDuotone className="w-4 h-4" />}
+        {tag && tag.icon ? <tag.icon className="text-lg" /> : <PiSealQuestionDuotone className="text-lg" />}
         <Link href={`/tags/${skill.name}`} className="flex items-center hover:underline">
           <div className="ml-2">{skill.name}</div>
           <IoIosLink className="w-4 h-4 ml-1" />

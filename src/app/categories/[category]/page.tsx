@@ -7,6 +7,7 @@ import IntroCard from "@/app/_components/_common/_side-column/intro-card";
 import { getAllCategories } from "@/lib/api/category";
 import CategoryHeader from "@/app/_components/_categories/category-header";
 import PostsByCategory from "@/app/_components/_common/_posts/posts-by-category";
+import { AuthorData } from "@/data/author";
 
 const CategoryPage: React.FC<Params> = async (props) => {
   const params = await props.params;
@@ -43,7 +44,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     title,
     openGraph: {
       title,
-      // images: [post.ogImage.url],
+      images: [AuthorData.imagePath],
     },
   };
 }

@@ -1,24 +1,15 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import Header from "@/app/_components/_layout/header";
 import Main from "@/app/_components/_layout/main";
 import Footer from "@/app/_components/_layout/footer";
 
 import "zenn-content-css";
 import "./globals.css";
+import GoogleAnalytics from "./_components/_google-analytics/google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
-  openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
-};
 
 const RootLayout: React.FC<{
   children: React.ReactNode;
@@ -62,6 +53,7 @@ const RootLayout: React.FC<{
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"
         />
+        <GoogleAnalytics />
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}

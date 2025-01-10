@@ -23,4 +23,5 @@ export const TagsData: Tag[] = [
   { name: "AWS", icon: FaAws, },
   { name: "SQL", icon: TbSql, },
   { name: "読書", icon: FaBook, },
+  { name: "リーダブルコード", },
 ];

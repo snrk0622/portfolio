@@ -10,6 +10,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { RiPhpFill } from "react-icons/ri";
 import { FaAws } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
+import { FaBook } from "react-icons/fa";
 
 export const TagsData: Tag[] = [
   { name: "JavaScript", icon: SiJavascript, },
@@ -21,4 +22,5 @@ export const TagsData: Tag[] = [
   { name: "PHP", icon: RiPhpFill, },
   { name: "AWS", icon: FaAws, },
   { name: "SQL", icon: TbSql, },
+  { name: "読書", icon: FaBook, },
 ];

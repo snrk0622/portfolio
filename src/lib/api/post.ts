@@ -1,3 +1,4 @@
+import { format } from 'date-fns'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
@@ -52,4 +53,10 @@ export function getPostsByTag(tagName: string, limit?: number) {
     .filter((post) => post.tags.some((tag) => tag.name === tagName))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
     .slice(0, limit ?? posts.length)
+}
+
+export function getPostsCountAt(date: Date): number {
+  const fmtDate = format(date, 'yyyy-MM-dd')
+  const posts = getAllPosts()
+  return posts.filter((post) => post.date === fmtDate).length
 }

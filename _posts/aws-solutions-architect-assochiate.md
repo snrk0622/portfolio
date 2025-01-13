@@ -1,6 +1,6 @@
 ---
 title: 'AWS SAA-C03に合格しました'
-date: '2024-01-09T00:00:00.000Z'
+date: '2025-01-09'
 category: 'blog'
 tags:
   - 'AWS'

@@ -13,7 +13,7 @@ const TagChip: React.FC<Props> = ({ tag, displayCount }) => {
 
   return (
     <Link
-      href={`/tags/${tag.name}`}
+      href={`/tags/${tag.id}`}
       key={tag.name}
       className="border border-light-sub dark:border-dark-sub rounded-md px-2 py-1 mr-2 my-1 text-xs text-light-sub dark:text-dark-sub bg-light-sub dark:bg-dark-sub bg-opacity-10 border-opacity-20 dark:bg-opacity-10 dark:border-opacity-20 hover:bg-opacity-20 dark:hover:bg-opacity-20"
     >

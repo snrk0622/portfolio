@@ -47,10 +47,10 @@ export function getPostsByCategory(category: Category, limit?: number) {
     .slice(0, limit ?? posts.length)
 }
 
-export function getPostsByTag(tagName: string, limit?: number) {
+export function getPostsByTagId(tagId: string, limit?: number) {
   const posts = getAllPosts()
   return posts
-    .filter((post) => post.tags.some((tag) => tag.name === tagName))
+    .filter((post) => post.tags.some((tag) => tag.id === tagId))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
     .slice(0, limit ?? posts.length)
 }

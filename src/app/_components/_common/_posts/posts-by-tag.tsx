@@ -1,6 +1,6 @@
 import PostThumbnail from '@/app/_components/_common/_posts/_post/post-thumbnail'
 import { Tag } from '@/interfaces/tag'
-import { getPostsByTag } from '@/lib/api/post'
+import { getPostsByTagId } from '@/lib/api/post'
 
 type Props = {
   tag: Tag
@@ -8,7 +8,7 @@ type Props = {
 }
 
 const PostsByTag: React.FC<Props> = ({ tag, limit }) => {
-  const posts = getPostsByTag(tag.name, limit)
+  const posts = getPostsByTagId(tag.name, limit)
 
   return (
     <div className="sm:flex sm:flex-wrap sm:items-stretch">

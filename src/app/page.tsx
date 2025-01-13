@@ -1,4 +1,5 @@
 import MainColumn from '@/app/_components/_common/_main-column/main-column'
+import CalendarCard from '@/app/_components/_common/_side-column/calendar-card'
 import SideColumn from '@/app/_components/_common/_side-column/side-column'
 import { AuthorData } from '@/data/author'
 import { BLOG_NAME } from '@/lib/constants'
@@ -14,6 +15,7 @@ const TopPage: React.FC = () => {
     <div className="lg:flex lg:flex-row-reverse">
       <SideColumn>
         <IntroCard />
+        <CalendarCard />
         <SkillsCard />
         <CertificationsCard />
         <TagsCard className="hidden sm:block" />

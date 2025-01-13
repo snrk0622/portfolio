@@ -33,6 +33,7 @@ const config: Config = {
         tighter: '-.04em',
       },
       fontSize: {
+        '5xs': ['0.5rem', { lineHeight: '0.5rem' }],
         '2xs': ['0.7rem', { lineHeight: '1rem' }],
         '5xl': '2.5rem',
         '6xl': '2.75rem',

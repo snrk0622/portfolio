@@ -1,6 +1,6 @@
 ---
 title: 'ZennのMarkdown記法一覧'
-date: '2024-01-05T00:00:00.000Z'
+date: '2025-01-05'
 category: 'blog'
 tags:
   - 'JavaScript'

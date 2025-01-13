@@ -6,6 +6,10 @@ export function getAllTags() {
   return TagsData
 }
 
+export function getTagById(tagId: string): Tag | undefined {
+  return getAllTags().find((tag) => tag.id === tagId)
+}
+
 export function getTagByName(tagName: string): Tag | undefined {
   return getAllTags().find((tag) => tag.name === tagName)
 }

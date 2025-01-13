@@ -6,13 +6,13 @@ import TagsCard from '@/app/_components/_common/_side-column/tags-card'
 import TagHeader from '@/app/_components/_tags/tag-header'
 import { AuthorData } from '@/data/author'
 import { Tag } from '@/interfaces/tag'
-import { getAllTags, getTagByName } from '@/lib/api/tag'
+import { getAllTags, getTagById } from '@/lib/api/tag'
 import { BLOG_NAME } from '@/lib/constants'
 import { Metadata } from 'next'
 
 const TagPage: React.FC<Params> = async (props) => {
   const params = await props.params
-  const tag = getTagByName(params.tag) as Tag
+  const tag = getTagById(params.tag) as Tag
   return (
     <div>
       <TagHeader tag={tag} />
@@ -55,7 +55,7 @@ export async function generateStaticParams() {
   const tags = getAllTags()
 
   return tags.map((tag) => ({
-    tag: tag.name,
+    tag: tag.id,
   }))
 }
 

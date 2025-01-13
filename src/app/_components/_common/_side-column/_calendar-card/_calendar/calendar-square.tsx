@@ -4,25 +4,31 @@ import { format } from 'date-fns'
 type Props = {
   date: Date
   isTarget?: boolean
+  wrapperClass: string
+  activeOpacityClass: string
+  disactiveOpacityClass: string
 }
 
-const CalendarSquare: React.FC<Props> = ({ date, isTarget = true }) => {
+const CalendarSquare: React.FC<Props> = ({
+  date,
+  isTarget = true,
+  wrapperClass,
+  activeOpacityClass,
+  disactiveOpacityClass,
+}) => {
   const displayMonth = format(date, 'M/')
   const displayDate = format(date, 'd')
   const count: number = getPostsCountAt(date)
-  const opacity =
-    count > 0
-      ? 'text-light-base dark:text-dark-base'
-      : 'bg-opacity-10 border-opacity-20 dark:bg-opacity-10 dark:border-opacity-20'
+  const opacity = count > 0 ? activeOpacityClass : disactiveOpacityClass
   return (
     <div
       className={`w-1/2 aspect-square p-0.5 ${isTarget ? '' : 'opacity-50'}`}
     >
-      <div
-        className={`w-full h-full bg-light-sub dark:bg-dark-sub ${opacity} border border-light-sub dark:border-dark-sub text-center text-5xs flex items-center justify-center`}
-      >
+      <div className={`w-full h-full ${wrapperClass} ${opacity}`}>
         {displayDate == '1' && <span>{displayMonth}</span>}
-        <span className="opacity-80">{displayDate}</span>
+        <span className={count > 0 ? 'opacity-100' : 'opacity-80'}>
+          {displayDate}
+        </span>
       </div>
     </div>
   )

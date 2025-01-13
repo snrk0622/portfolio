@@ -1,9 +1,8 @@
-import Link from "next/link";
-import { FaTerminal } from "react-icons/fa6";
+import Link from 'next/link'
+import { FaTerminal } from 'react-icons/fa6'
 
-
-import { ThemeSwitcher } from "@/app/_components/_layout/_header/theme-switcher";
-import { BLOG_NAME } from "@/lib/constants";
+import { ThemeSwitcher } from '@/app/_components/_layout/_header/theme-switcher'
+import { BLOG_NAME } from '@/lib/constants'
 
 const Header: React.FC = () => {
   return (
@@ -11,12 +10,12 @@ const Header: React.FC = () => {
       <div className="grow">
         <Link href="/" className="flex items-center">
           <FaTerminal className="text-lg mr-2" />
-          <span>{ BLOG_NAME}</span>
+          <span>{BLOG_NAME}</span>
         </Link>
       </div>
       <ThemeSwitcher />
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

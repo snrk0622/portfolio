@@ -1,5 +1,5 @@
-import { Tag } from '@/interfaces/tag'
 import { TagsData } from '@/data/tags'
+import { Tag } from '@/interfaces/tag'
 import { getAllPosts } from './post'
 
 export function getAllTags() {

@@ -1,7 +1,7 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons'
 
 export type ExternalLink = {
-  name: string;
-  icon: IconType;
-  url: string;
-};
+  name: string
+  icon: IconType
+  url: string
+}

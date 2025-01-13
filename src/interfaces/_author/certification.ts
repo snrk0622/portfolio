@@ -1,4 +1,4 @@
 export type Certification = {
-  name: string;
-  url?: string;
-};
+  name: string
+  url?: string
+}

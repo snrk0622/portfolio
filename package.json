@@ -27,6 +27,7 @@
     "zenn-markdown-html": "^0.1.158"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^15.1.4",
     "@types/gtag.js": "^0.0.20",
     "@types/node": "^20.14.8",
     "@types/react": "npm:types-react@19.0.0-rc.1",
@@ -35,6 +36,8 @@
     "@typescript-eslint/parser": "^8.19.1",
     "autoprefixer": "^10.4.19",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",

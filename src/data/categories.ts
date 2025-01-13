@@ -1,6 +1,3 @@
-import { Category } from "@/interfaces/category";
+import { Category } from '@/interfaces/category'
 
-export const CategoriesDate: Category[] = [
-  'blog',
-  'work',
-]
+export const CategoriesDate: Category[] = ['blog', 'work']

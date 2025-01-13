@@ -1,19 +1,19 @@
-import { Inter } from "next/font/google";
-import cn from "classnames";
+import cn from 'classnames'
+import { Inter } from 'next/font/google'
 
-import Header from "@/app/_components/_layout/header";
-import Main from "@/app/_components/_layout/main";
-import Footer from "@/app/_components/_layout/footer";
+import Footer from '@/app/_components/_layout/footer'
+import Header from '@/app/_components/_layout/header'
+import Main from '@/app/_components/_layout/main'
 
-import "zenn-content-css";
-import "./globals.css";
-import GoogleAnalytics from "./_components/_google-analytics/google-analytics";
+import 'zenn-content-css'
+import GoogleAnalytics from './_components/_google-analytics/google-analytics'
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 const RootLayout: React.FC<{
-  children: React.ReactNode;
-}> = ({ children }) =>  {
+  children: React.ReactNode
+}> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -48,7 +48,10 @@ const RootLayout: React.FC<{
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <script src="https://embed.zenn.studio/js/listen-embed-event.js"></script>
+        <script
+          src="https://embed.zenn.studio/js/listen-embed-event.js"
+          async
+        ></script>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"
@@ -56,14 +59,14 @@ const RootLayout: React.FC<{
         <GoogleAnalytics />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn(inter.className, 'dark:bg-slate-900 dark:text-slate-400')}
       >
         <Header />
         <Main>{children}</Main>
         <Footer />
       </body>
     </html>
-  );
+  )
 }
 
-export default RootLayout;
+export default RootLayout

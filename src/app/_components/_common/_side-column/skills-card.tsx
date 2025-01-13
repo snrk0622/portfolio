@@ -1,10 +1,10 @@
-import SideColumnContainer from "@/app/_components/_common/_side-column/_common/side-column-container";
-import SkillItem from "./_skills-card/skill-item";
+import SideColumnContainer from '@/app/_components/_common/_side-column/_common/side-column-container'
+import SkillItem from './_skills-card/skill-item'
 
-import { AuthorData } from "@/data/author";
+import { AuthorData } from '@/data/author'
 
 const SkillsCard: React.FC = () => {
-  const { skills } = AuthorData;
+  const { skills } = AuthorData
 
   return (
     <SideColumnContainer title="Skills." border={true}>
@@ -14,7 +14,7 @@ const SkillsCard: React.FC = () => {
         ))}
       </div>
     </SideColumnContainer>
-  );
+  )
 }
 
-export default SkillsCard;
+export default SkillsCard

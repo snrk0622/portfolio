@@ -1,39 +1,40 @@
-import { FaGithub } from "react-icons/fa";
-import { SiZenn } from "react-icons/si";
+import { FaGithub } from 'react-icons/fa'
+import { SiZenn } from 'react-icons/si'
 
-import { Author } from "@/interfaces/author";
+import { Author } from '@/interfaces/author'
 
 export const AuthorData: Author = {
-  name: "snrk",
-  description: "美容系メディアを運営する会社でエンジニアをしています。コーヒーと猫が好きです。",
-  imagePath: "/assets/_author/snrk.png",
+  name: 'snrk',
+  description:
+    '美容系メディアを運営する会社でエンジニアをしています。コーヒーと猫が好きです。',
+  imagePath: '/assets/_author/snrk.png',
   skills: [
     {
-      name: "JavaScript",
+      name: 'JavaScript',
       years: 5,
     },
     {
-      name: "TypeScript",
+      name: 'TypeScript',
       years: 2,
     },
     {
-      name: "React",
+      name: 'React',
       years: 2,
     },
     {
-      name: "Node.js",
+      name: 'Node.js',
       years: 2,
     },
     {
-      name: "PHP",
+      name: 'PHP',
       years: 3,
     },
     {
-      name: "AWS",
+      name: 'AWS',
       years: 1,
     },
     {
-      name: "SQL",
+      name: 'SQL',
       years: 3,
     },
   ],
@@ -45,14 +46,14 @@ export const AuthorData: Author = {
   ],
   externalLinks: [
     {
-      name: "GitHub",
+      name: 'GitHub',
       icon: FaGithub,
-      url: "https://github.com/snrk0622",
+      url: 'https://github.com/snrk0622',
     },
     {
-      name: "Zenn",
+      name: 'Zenn',
       icon: SiZenn,
-      url: "https://zenn.dev/snrk",
+      url: 'https://zenn.dev/snrk',
     },
   ],
 }

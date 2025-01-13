@@ -1,6 +1,6 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons'
 
 export type Tag = {
-  name: string;
-  icon?: IconType;
-};
+  name: string
+  icon?: IconType
+}

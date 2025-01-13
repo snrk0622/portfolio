@@ -1,1 +1,1 @@
-export type Category = string;
+export type Category = string

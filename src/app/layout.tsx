@@ -48,7 +48,10 @@ const RootLayout: React.FC<{
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <script src="https://embed.zenn.studio/js/listen-embed-event.js"></script>
+        <script
+          src="https://embed.zenn.studio/js/listen-embed-event.js"
+          async
+        ></script>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"

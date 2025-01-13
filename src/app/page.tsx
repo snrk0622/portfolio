@@ -16,14 +16,14 @@ const TopPage: React.FC = () => {
       <SideColumn>
         <IntroCard />
         <CalendarCard />
-        <SkillsCard />
         <CertificationsCard />
-        <TagsCard className="hidden sm:block" />
+        <SkillsCard />
+        <TagsCard className="hidden lg:block" />
       </SideColumn>
       <MainColumn>
         <PostsContent title="Recent Blogs." category="blog" limit={6} />
         <PostsContent title="Works." category="work" />
-        <TagsCard className="block sm:hidden" />
+        <TagsCard className="block lg:hidden" />
       </MainColumn>
     </div>
   )

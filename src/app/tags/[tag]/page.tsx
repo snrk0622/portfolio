@@ -1,18 +1,18 @@
-import { Metadata } from "next";
-import { getAllTags, getTagByName } from "@/lib/api/tag";
-import { BLOG_NAME } from "@/lib/constants";
-import SideColumn from "@/app/_components/_common/_side-column/side-column";
-import MainColumn from "@/app/_components/_common/_main-column/main-column";
-import TagsCard from "@/app/_components/_common/_side-column/tags-card";
-import IntroCard from "@/app/_components/_common/_side-column/intro-card";
-import { Tag } from "@/interfaces/tag";
-import TagHeader from "@/app/_components/_tags/tag-header";
-import PostsByTag from "@/app/_components/_common/_posts/posts-by-tag";
-import { AuthorData } from "@/data/author";
+import MainColumn from '@/app/_components/_common/_main-column/main-column'
+import PostsByTag from '@/app/_components/_common/_posts/posts-by-tag'
+import IntroCard from '@/app/_components/_common/_side-column/intro-card'
+import SideColumn from '@/app/_components/_common/_side-column/side-column'
+import TagsCard from '@/app/_components/_common/_side-column/tags-card'
+import TagHeader from '@/app/_components/_tags/tag-header'
+import { AuthorData } from '@/data/author'
+import { Tag } from '@/interfaces/tag'
+import { getAllTags, getTagById } from '@/lib/api/tag'
+import { BLOG_NAME } from '@/lib/constants'
+import { Metadata } from 'next'
 
 const TagPage: React.FC<Params> = async (props) => {
-  const params = await props.params;
-  const tag = getTagByName(params.tag) as Tag;
+  const params = await props.params
+  const tag = getTagById(params.tag) as Tag
   return (
     <div>
       <TagHeader tag={tag} />
@@ -27,20 +27,20 @@ const TagPage: React.FC<Params> = async (props) => {
         </SideColumn>
       </div>
     </div>
-  );
+  )
 }
 
 type Params = {
   params: Promise<{
-    tag: string;
-  }>;
-};
+    tag: string
+  }>
+}
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
-  const params = await props.params;
-  const tagName = params.tag;
+  const params = await props.params
+  const tagName = params.tag
 
-  const title = `All blog for ${tagName} | ${BLOG_NAME}`;
+  const title = `All blog for ${tagName} | ${BLOG_NAME}`
 
   return {
     title,
@@ -48,15 +48,15 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       title,
       images: [AuthorData.imagePath],
     },
-  };
+  }
 }
 
 export async function generateStaticParams() {
-  const tags = getAllTags();
+  const tags = getAllTags()
 
   return tags.map((tag) => ({
-    tag: tag.name,
-  }));
+    tag: tag.id,
+  }))
 }
 
-export default TagPage;
+export default TagPage

@@ -1,14 +1,14 @@
-import SideColumnContainer from "./_common/side-column-container";
-import React from "react";
-import Tags from "../_tags/tags";
-import { getAllTags } from "@/lib/api/tag";
+import { getAllTags } from '@/lib/api/tag'
+import React from 'react'
+import Tags from '../_tags/tags'
+import SideColumnContainer from './_common/side-column-container'
 
 type Props = {
-  className?: string;
+  className?: string
 }
 
 const TagsCard: React.FC<Props> = ({ className }) => {
-  const tags = getAllTags();
+  const tags = getAllTags()
 
   return (
     <div className={className}>
@@ -16,7 +16,7 @@ const TagsCard: React.FC<Props> = ({ className }) => {
         <Tags tags={tags} displayCount={true} />
       </SideColumnContainer>
     </div>
-  );
+  )
 }
 
-export default TagsCard;
+export default TagsCard

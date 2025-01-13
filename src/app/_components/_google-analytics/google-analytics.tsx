@@ -1,21 +1,21 @@
-"use client";
+'use client'
 
-import { usePathname, useSearchParams } from "next/navigation";
-import Script from "next/script";
-import React, { useEffect, Suspense } from "react";
-import { IS_GATAG, GA_TAG_ID, pageview } from "@/lib/gtag";
+import { GA_TAG_ID, IS_GATAG, pageview } from '@/lib/gtag'
+import { usePathname, useSearchParams } from 'next/navigation'
+import Script from 'next/script'
+import React, { Suspense, useEffect } from 'react'
 
 const GoogleAnalytics: React.FC = () => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   useEffect(() => {
     if (!IS_GATAG) {
-      return;
+      return
     }
-    const url = pathname + searchParams.toString();
-    pageview(url);
-  }, [pathname, searchParams]);
+    const url = pathname + searchParams.toString()
+    pageview(url)
+  }, [pathname, searchParams])
 
   return (
     <>
@@ -34,15 +34,15 @@ const GoogleAnalytics: React.FC = () => {
         `}
       </Script>
     </>
-  );
-};
+  )
+}
 
 const GoogleAnalyticsWithSuspense: React.FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <GoogleAnalytics />
     </Suspense>
-  );
-};
+  )
+}
 
-export default GoogleAnalyticsWithSuspense;
+export default GoogleAnalyticsWithSuspense

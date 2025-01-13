@@ -1,9 +1,13 @@
-import { Tag } from '@/interfaces/tag'
 import { TagsData } from '@/data/tags'
+import { Tag } from '@/interfaces/tag'
 import { getAllPosts } from './post'
 
 export function getAllTags() {
   return TagsData
+}
+
+export function getTagById(tagId: string): Tag | undefined {
+  return getAllTags().find((tag) => tag.id === tagId)
 }
 
 export function getTagByName(tagName: string): Tag | undefined {

@@ -1,12 +1,12 @@
-import { Skill } from "@/interfaces/_author/skill";
-import { ExternalLink } from "./_author/external-link";
-import { Certification } from "./_author/certification";
+import { Skill } from '@/interfaces/_author/skill'
+import { Certification } from './_author/certification'
+import { ExternalLink } from './_author/external-link'
 
 export type Author = {
-  name: string;
-  description: string;
-  imagePath: string;
-  skills: Skill[];
-  certifications: Certification[];
-  externalLinks: ExternalLink[];
-};
+  name: string
+  description: string
+  imagePath: string
+  skills: Skill[]
+  certifications: Certification[]
+  externalLinks: ExternalLink[]
+}

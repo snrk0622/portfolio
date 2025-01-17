@@ -1,6 +1,6 @@
 # snrk tech blog.
 
-https://snrk-portfolio--pr46-fix-45-ok5pxszf.web.app/
+https://snrk.me/
 
 ## tevh stack.
 

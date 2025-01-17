@@ -11,7 +11,7 @@ const TagHeader: React.FC<Props> = ({ tag }) => {
       {tag.icon ? (
         <tag.icon className="mr-2 w-14 h-14" />
       ) : (
-        <FaHashtag className="mr-2" />
+        <FaHashtag className="mr-2 w-14 h-14" />
       )}
       <h1 className="text-5xl leading-relaxed font-bold mb-5">{tag.name}</h1>
     </div>

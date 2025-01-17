@@ -8,7 +8,7 @@ type Props = {
 }
 
 const PostsByTag: React.FC<Props> = ({ tag, limit }) => {
-  const posts = getPostsByTagId(tag.name, limit)
+  const posts = getPostsByTagId(tag.id, limit)
 
   return (
     <div className="sm:flex sm:flex-wrap sm:items-stretch">

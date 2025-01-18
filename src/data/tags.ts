@@ -2,6 +2,7 @@ import { Tag } from '@/interfaces/tag'
 
 // https://react-icons.github.io/react-icons/
 import { FaAws, FaBook } from 'react-icons/fa'
+import { FaDartLang, FaFlutter } from 'react-icons/fa6'
 import { RiPhpFill } from 'react-icons/ri'
 import {
   SiJavascript,
@@ -25,4 +26,6 @@ export const TagsData: Tag[] = [
   { id: 'sql', name: 'SQL', icon: TbSql },
   { id: 'book', name: '読書', icon: FaBook },
   { id: 'readable-code', name: 'リーダブルコード' },
+  { id: 'dart', name: 'Dart', icon: FaDartLang },
+  { id: 'flutter', name: 'Flutter', icon: FaFlutter },
 ]

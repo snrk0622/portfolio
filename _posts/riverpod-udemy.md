@@ -9,6 +9,9 @@ tags:
 
 # はじめに
 
+趣味でモバイルアプリを開発する際にFlutterを使っているが、何度学んでも少し時間が空くとriverpodの使い方を忘れてしまう・・
+この記事は未来の自分のためのメモです。
+
 ## 状態管理とは
 
 - アプリケーションの動作やUIの状態を追跡し、制御すること
@@ -85,8 +88,6 @@ flutter pub add dev:build_runner
 flutter pub add dev:custom_lint
 flutter pub add dev:riverpod_lint
 ```
-
-TODO: それぞれのパッケージの用途
 
 ## 使い方
 
@@ -194,3 +195,5 @@ class ChildWidget extends ConsumerWidget {
 ```dart
 ref.read(プロバイダー名.notifier).メソッド()
 ```
+
+### 以上
